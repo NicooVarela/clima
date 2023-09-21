@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Entrega</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+      <!-------------------- NAV ------------------ -->
+      <nav class="w-100 bg-dark text-center text-light py-2 d-flex justify-content-center align-content-center"><p class="m-0 align-self-center">ElTurista.com</p></nav>
+      <!-------------------- ESTADO ACTUAL 1 ------------------ -->
+      <div class="d-xxl-flex flex-xxl-row col-xxl-12" id="contenedorGeneral">
+        <section class="d-xxl-flex flex-xxl-wrap col-xxl-8">
+            <section class="col-lg-12 d-lg-flex flex-lg-wrap col-xxl-12" id="sectionEstadoActual">
+                
+                <!-- ANTES DE CARGAR CIUDAD -->
+                <form class="d-flex flex-row col-11 col-lg-5 order-lg-0 d-block m-auto borderInputs texto text-dark mt-5 mb-2 justify-content-between" id="form1">
+                    <span class="position-absolute d-none" id="error1">Ingrese una ciudad correctamente</span>
+                    <input type="text" class="col-9 ciudad1 borderInputs sombra" placeholder="Ingrese una Ciudad">
+                    <input type="button" value="Buscar" class="col-2 sombra btnCiudad1 borderInputs boton">
+                </form>
+                
+                <div class="col-11 col-lg-5 order-lg-2 d-flex flex-column degradadoDespejado text-center mx-auto borderCaja justify-content-center align-content-center p-4 mt-2 sombra" id="ciudadNoIngresada1">
+                    <h2 class="estadoActual d-flex justify-content-center align-content-center">Ingrese la ciudad 1</h2>
+                    <h3 class="textFecha p-2">La misma sera buscada en nuestra base de datos y comparada con la segunda opcion que usted seleccione</h3>
+                    <img src="loader.gif" class="loader d-none" id="loader1">
+                </div>
+
+                <!-- CIUDAD CARGADA -->
+                <div class="d-none col-11 col-lg-5 order-lg-2 d-flex flex-column degradadoDespejado text-center mx-auto borderCaja p-4 justify-content-around sombra" id="ciudadIngresada1">
+                    <div class="col-12 d-flex flex-column">
+                        <h2 class="estadoActual">Estado Actual</h2>
+                        <h3 class="textFecha" id="fecha1">Miercoles 29 de Septiembre</h3>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row justify-content-center justify-content-evenly align-items-center">
+                        <img src="" alt="" class="iconoActual" id="imagenActual1">
+                        <div>
+                          <h2 class="tempActual" id="tempActual1">32°</h2>
+                          <h3 class="texto" id="st1">ST 36°</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-------------------- ESTADO ACTUAL 2 ------------------ -->
+
+                <!-- ANTES DE CARGAR CIUDAD -->
+                <form class="d-flex flex-row col-11 col-lg-5 order-lg-0 d-block m-auto borderInputs texto text-dark mt-5 mb-1 justify-content-between align-content-center" id="form2">
+                    <span class="position-absolute d-none" id="error2">Ingrese una ciudad correctamente</span>
+                    <input type="text" id="ciudad2" class="col-9 sombra ciudad2 borderInputs" placeholder="Ingrese una Ciudad">
+                    <input type="button" value="Buscar" id="btnCiudad2" class="col-2 sombra btnCiudad2 borderInputs boton">
+                </form>   
+                
+                <div class="col-11 col-lg-5 order-lg-2 d-flex flex-column degradadoDespejado text-center mx-auto borderCaja justify-content-center align-content-center p-4 mt-2 sombra" id="ciudadNoIngresada2">
+                    <h2 class="estadoActual d-flex justify-content-center align-content-center">Ingrese la ciudad 2</h2>
+                    <h3 class="textFecha p-2">La misma sera buscada en nuestra base de datos y comparada con la primera opcion que usted seleccione</h3>
+                    <img src="loader.gif" class="loader d-none" id="loader2">
+                </div>
+
+                <!-- CIUDAD CARGADA -->
+                <div class="d-none col-11 col-lg-5 order-lg-3 d-flex flex-column degradadoLluvia text-center mx-auto borderCaja p-4 justify-content-around sombra" id="ciudadIngresada2">
+                    <div class="col-12 d-flex flex-column">
+                        <h2 class="estadoActual">Estado Actual</h2>
+                        <h3 class="textFecha" id="fecha2">Miercoles 29 de Septiembre</h3>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-md-row justify-content-center justify-content-evenly align-items-center">
+                        <img src="" alt="" class="iconoActual" id="imagenActual2">
+                        <div>
+                          <h2 class="tempActual" id="tempActual2">32°</h2>
+                          <h3 class="texto" id="st2">ST 36°</h3>
+                        </div>
+                    </div>
+                </div>
+                    
+              </section>
+              <!-------------------- PROXIMOS DIAS ------------------ -->
+              <div class="col-11 d-flex flex-wrap justify-content-between degradadoProxDias text-center mx-auto gapC borderCaja p-4 mt-5 mb-5 sombra" id="proxDias">
+
+                <h2 class="text-light w-100 align-self-center text-center">Pronostico proximos 5 dias</h2>
+          
+              </div>
+
+              <!-------------------- CUADRO COMPARADOR ------------------ -->
+          </section>
+            <div class="col-11 col-xxl-3 d-flex flex-column text-center mx-auto borderCaja borderCaja degradadoComparacion justify-content-center mb-5 sombra" id="comparacion">
+                <div class="p-5" id="resultadoComparacion">
+                    <p class="d-block text-dark textoClick">Seleccione 2 ciudades y el sistema evaluara las condiciones meteorlogicas de ambas para recomendarle la mejor opcion para visitar como turista.<br>Los parametros los cuales se analizaran son: Promedio de temperaturas, temperatrua maxima y minima, probabilidad de lluvia, humedad, velocidad del viento y el indice UVI.</p>
+                </div>
+            </div>
+      </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="codigo.js"></script>
+</body>
+
+</html>

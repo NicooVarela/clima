@@ -1,0 +1,135 @@
+/* --------- Reset --------- */
+body{margin: 0; padding: 0; font-family: 'Nunito', sans-serif;}
+
+
+/* --------- Colores --------- */
+.degradadoDespejado{background: linear-gradient(116.83deg, #6BDCFF 18.72%, #009ED0 94.04%);}
+.degradadoLluvia{background: linear-gradient(116.83deg, #B2BFC2 18.72%, #678088 94.04%);}
+.degradadoNoche{background: linear-gradient(128.58deg, #396279 12.12%, #0D3947 91.47%);}
+.degradadoDiario{background: linear-gradient(174.02deg, rgba(245, 245, 245, 0.3) 0.68%, rgba(235, 235, 235, 0.1) 99.23%);}
+.degradadoProxDias{background: linear-gradient(98.73deg, #2E99D6 0%, #62CDEF 100%);}
+.degradadoComparacion{background: linear-gradient(166.94deg, #f7f7f7 0.62%, #e7e7e7 100.25%);}
+.sombra{box-shadow: 2px 2px 25px -11px rgba(0, 0, 0, 0.25);}
+/* --------- Iconos --------- */
+.iconoActual{width: 8em;}
+.iconoMini{width: 3.5em;}
+
+
+/* --------- Tamños --------- */
+.vh-100{height: 100vh;}
+
+
+/* --------- Texto --------- */
+.estadoActual{
+    font-size: 1.5em;
+    font-weight: 900;
+    letter-spacing: .1em;
+    color: white;
+}
+.tempActual{
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: .1em;
+    color: white;
+}
+.textFecha{
+    font-size: 1.2em;
+    font-weight: 200;
+    color: white;
+}
+.texto{
+    font-size: 1em;
+    font-weight: 400;
+    color: white;
+}
+
+.textoClick{
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: .05em;
+    color: white;
+}
+
+
+/* --------- General --------- */
+.borderCaja{border-radius: .7em;}
+.borderInputs{border-radius: .4em;}
+.gapC{column-gap: 2px; }
+
+nav{
+    height: 5vh;
+}
+nav p{
+    letter-spacing: .1em;
+    font-size: 1em;
+    font-weight: 600;
+}
+#contenedorGeneral{
+    height: 95vh;
+}
+#sectionEstadoActual{
+    height: calc(50% - 2em);
+}
+
+#proxDias{
+    min-height: calc(50% - 2em);
+    position: relative;
+}
+
+#comparacion{
+    max-height: 95vh;
+}
+
+#ciudadIngresada1, #ciudadIngresada2 :hover{
+    cursor: pointer;
+}
+#ciudadIngresada1, #ciudadIngresada2{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+input{
+    background: #F3F3F3;
+    border: 1px solid #C8C8C8;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 10px -5px #B5B5B5;
+}
+
+.boton{
+    background: linear-gradient(98.73deg, #2E99D6 0%, #62CDEF 80%);
+    color: white;
+    font-weight: 600;
+    border: none;
+    font-size: 1em;
+    letter-spacing: .08em;
+    padding: .5em;
+    transition: all .2s;
+}
+
+.boton:hover{
+    font-weight: 800;
+    background: linear-gradient(98.73deg, #2589c4 0%, #4ebadb 80%);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.137);
+    transition: all .2s;
+}
+
+.loader{
+    width:  30%;
+    margin: auto;
+}
+
+.identificadorCiudad{
+    width: 100%;
+    color: rgba(247, 247, 247, 0.932);
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: .2em;
+}
+form{
+    height: 10%;
+    position: relative;
+}
+
+#error1, #error2{
+    top: -50%;
+    color: red;
+}
